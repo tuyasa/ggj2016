@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 	
 	public Transform target;
-
+	public bool lockCamera;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = target.position + -10*Vector3.forward;
+		if(!lockCamera)
+			transform.position = target.position + -10*Vector3.forward + Vector3.up*5;
 	}
 }
