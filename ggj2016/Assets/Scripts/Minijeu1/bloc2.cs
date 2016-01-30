@@ -4,7 +4,9 @@ using System.Collections;
 public class bloc2 : MonoBehaviour {
 	Rigidbody2D rb;
 	bool b = false;
+	bool moved = false;
 	// Use this for initialization
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 	}
@@ -12,13 +14,16 @@ public class bloc2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(b)
-			transform.Translate (new Vector2 (-4, 0)*Time.deltaTime);
+			transform.Translate (new Vector2 (5, 0)*Time.deltaTime);
+	}
+
+	public bool getmvd(){
+		return b;
 	}
 
 	IEnumerator mve(){
-		yield return new WaitForSeconds (1.2f);
+		yield return new WaitForSeconds (0.5f);
 		b = true;
-
 	}
 	
 	void OnTriggerEnter2D(Collider2D other)
@@ -28,8 +33,6 @@ public class bloc2 : MonoBehaviour {
 		}
 
 			StartCoroutine("mve");
-
-
 	}
 
 }
