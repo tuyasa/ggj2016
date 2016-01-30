@@ -115,7 +115,7 @@ public class Controller2D : MonoBehaviour {
 
 	void CalculateRaySpacing() {
 		Bounds bounds = boxColllider.bounds;
-		
+
 		horizontalRayCount = Mathf.Clamp (horizontalRayCount, 2, int.MaxValue);
 		verticalRayCount = Mathf.Clamp (verticalRayCount, 2, int.MaxValue);
 		

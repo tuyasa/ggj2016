@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
 	bool facingRight;
 
 	public float accelerationOnGround;
+	public float accelerationOnAir;
 	public float moveSpeed;
 	public float gravity = -50f;
 	public float jumpMagnitude =20f;
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour {
 		}
 
 		float targetVelocityX = horizontalMove * moveSpeed;
-		controller.SetHorizontalForce(Mathf.SmoothDamp(controller.speed.x,targetVelocityX,ref smoothX,accelerationOnGround));
+		controller.SetHorizontalForce(Mathf.SmoothDamp(controller.speed.x,targetVelocityX,ref smoothX,controller.collisions.below ? accelerationOnGround : accelerationOnAir));
 	}
 
 	public void Jump()
