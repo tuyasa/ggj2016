@@ -3,6 +3,8 @@ using System.Collections;
 
 public class DoorAnimator : MonoBehaviour {
 
+    public DoorAnimator twin;
+
     public Sprite[] sprites;
     SpriteRenderer sr;
     public void OnEnable()

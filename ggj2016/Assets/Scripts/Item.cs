@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Item : MonoBehaviour {
-	string name;
+	public string name;
 	ParticleSystem ps;
 
 	// Use this for initialization
