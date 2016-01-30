@@ -43,7 +43,7 @@ public class Controller2DPlayer : MonoBehaviour {
 	// Update is called once per fra
 	void LateUpdate () {
 		speed.y += Gravity * Time.deltaTime;
-		Debug.Log(collisions);
+		//Debug.Log(collisions);
 		Move(speed * Time.deltaTime);
 
 		if(collisions.below || collisions.above)
