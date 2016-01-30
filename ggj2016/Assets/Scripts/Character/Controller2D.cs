@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Controller2DPlayer : MonoBehaviour {
+public class Controller2D : MonoBehaviour {
 
 	public LayerMask collisionsMask;
 	private BoxCollider2D boxColllider;
@@ -42,8 +42,8 @@ public class Controller2DPlayer : MonoBehaviour {
 	
 	// Update is called once per fra
 	void LateUpdate () {
+
 		speed.y += Gravity * Time.deltaTime;
-		Debug.Log(collisions);
 		Move(speed * Time.deltaTime);
 
 		if(collisions.below || collisions.above)
