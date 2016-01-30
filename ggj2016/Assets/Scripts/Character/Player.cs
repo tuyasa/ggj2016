@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 	public float moveSpeed;
 	public float gravity = -50f;
 	public float jumpMagnitude =20f;
+	public GameObject itemHolder;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
