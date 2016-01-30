@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour {
+
+    public UnityEngine.EventSystems.EventSystem eventSystem;
 
     public CanvasRenderer pause;
     public CanvasRenderer start;
     public CanvasRenderer quit;
     public CanvasRenderer title;
     public CanvasRenderer helperText;
+    public CanvasRenderer UIBG;
+
+    public MeshRenderer blackRenderer;
 
     enum State
     {
@@ -21,13 +27,38 @@ public class Manager : MonoBehaviour {
 
     State gameState = State.NotStarted;
 
-    public void StartOnClick()
+    public IEnumerator Start()
     {
+        DontDestroyOnLoad(this.gameObject); //I want to keep the UI during the whole game
+
+        //AppearSequence
+        eventSystem.enabled = false;
+        yield return StartCoroutine(FadeFromBlack(1f));
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(FadeIn(title, time: 0.4f));
+        yield return StartCoroutine(FadeIn(start, time: 0.2f));
+
+        eventSystem.enabled = true;
+    }
+
+    public void StartOnClick() {
+        StartCoroutine(StartOnClickRoutine());
+    }
+
+    IEnumerator StartOnClickRoutine()
+    {
+
+        //Start button OnClick() Sequence
         switch (gameState)
         {
             case State.NotStarted:
+
+                yield return StartCoroutine(FadeToBlack(0.4f));
+                SceneManager.LoadScene("HouseScene");
+                yield return StartCoroutine(FadeFromBlack(0.5f));
+
+                yield return StartCoroutine(FadeOut(title));
                 start.GetComponentInChildren<Text>().text = "Continue";
-                StartCoroutine(FadeOut(title));
                 StartCoroutine(FadeIn(helperText));
 
                 gameState = State.HelperText;
@@ -39,6 +70,7 @@ public class Manager : MonoBehaviour {
                 StartCoroutine(FadeIn(pause));
                 StartCoroutine(FadeOut(start));
                 StartCoroutine(FadeOut(quit));
+                StartCoroutine(FadeOut(UIBG));
                 StartCoroutine(FadeOut(title));
 
                 gameState = State.OnGame;
@@ -49,6 +81,7 @@ public class Manager : MonoBehaviour {
                 StartCoroutine(FadeOut(start));
                 StartCoroutine(FadeOut(quit));
                 StartCoroutine(FadeOut(title));
+                StartCoroutine(FadeOut(UIBG));
 
                 gameState = State.OnGame;
 
@@ -70,6 +103,7 @@ public class Manager : MonoBehaviour {
                 StartCoroutine(FadeIn(start));
                 StartCoroutine(FadeIn(title));
                 StartCoroutine(FadeIn(quit));
+                StartCoroutine(FadeIn(UIBG));
                 StartCoroutine(FadeOut(pause));
 
                 gameState = State.Paused;
@@ -87,7 +121,7 @@ public class Manager : MonoBehaviour {
         Application.Quit();
     }
 
-    IEnumerator FadeIn(CanvasRenderer graphic, float time = 0.2f)
+    IEnumerator FadeIn(CanvasRenderer graphic, float target = 1f, float time = 0.2f)
     {
         graphic.SetAlpha(0);
         graphic.gameObject.SetActive(true);
@@ -95,21 +129,21 @@ public class Manager : MonoBehaviour {
         float t = time;
         while(t>0)
         {
-            graphic.SetAlpha(1-(t/time));
+            graphic.SetAlpha(Mathf.Lerp(0, target,1-(t/time)));
             t -= Time.deltaTime;
             yield return null;
         }
 
-        graphic.SetAlpha(1);
+        graphic.SetAlpha(target);
     }
 
-    IEnumerator FadeOut(CanvasRenderer graphic, float time = 0.2f)
+    IEnumerator FadeOut(CanvasRenderer graphic,float source = 1f, float time = 0.2f)
     {
-        graphic.SetAlpha(1);
+        graphic.SetAlpha(source);
         float t = time;
         while (t > 0)
         {
-            graphic.SetAlpha(t / time);
+            graphic.SetAlpha(Mathf.Lerp(source,0,1-(t/time)));
             t -= Time.deltaTime;
             yield return null;
         }
@@ -117,6 +151,30 @@ public class Manager : MonoBehaviour {
         graphic.SetAlpha(0);
 
         graphic.gameObject.SetActive(false);
+    }
+
+    IEnumerator FadeToBlack(float time = 0.2f)
+    {
+        float t = time;
+        while(t>0)
+        {
+            blackRenderer.material.SetFloat("_Visibility", 1 - (t / time));
+            t -= Time.deltaTime;
+            yield return null;
+        }
+        blackRenderer.material.SetFloat("_Visibility", 1);
+    }
+
+    IEnumerator FadeFromBlack(float time = 0.2f)
+    {
+        float t = time;
+        while (t > 0)
+        {
+            blackRenderer.material.SetFloat("_Visibility",t / time);
+            t -= Time.deltaTime;
+            yield return null;
+        }
+        blackRenderer.material.SetFloat("_Visibility",0);
     }
 
 }
