@@ -23,6 +23,7 @@ public class RotateOnHover : MonoBehaviour {
     {
         over = false;
         StartCoroutine(Rotate());
+
     }
 
     IEnumerator Rotate(float time = 0.4f)

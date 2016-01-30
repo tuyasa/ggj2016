@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: d1ac307a92646044aa79d4e5a813cf7c
+timeCreated: 1454164954
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Doors_0
+    21300002: Doors_1
+    21300004: Doors_2
+    21300006: Doors_3
+    21300008: Doors_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 125
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Doors_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 17
+        width: 69
+        height: 316
+      alignment: 9
+      pivot: {x: 0.93227035, y: 0.57366884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.326653, y: 134.72064}
+        - {x: -64.32665, y: 84.72064}
+        - {x: -64.32665, y: -181.27936}
+        - {x: -54.326653, y: -181.27936}
+        - {x: -53.326653, y: -180.27936}
+        - {x: 3.6733475, y: -136.27936}
+        - {x: 4.6733475, y: -98.27936}
+        - {x: 4.6733475, y: 134.72064}
+    - name: Doors_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 14
+        width: 98
+        height: 320
+      alignment: 9
+      pivot: {x: 0.03975802, y: 0.5659278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.103714, y: 138.9031}
+        - {x: -2.896286, y: 138.9031}
+        - {x: -3.896286, y: 137.9031}
+        - {x: -3.896286, y: -125.09689}
+        - {x: 73.103714, y: -181.0969}
+        - {x: 93.103714, y: -181.0969}
+        - {x: 94.103714, y: -180.0969}
+        - {x: 94.103714, y: -167.0969}
+        - {x: 93.103714, y: -163.0969}
+        - {x: 92.103714, y: 81.90311}
+        - {x: 91.103714, y: 84.90311}
+    - name: Doors_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 77
+        width: 128
+        height: 256
+      alignment: 9
+      pivot: {x: 0.011224747, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.4367676, y: 127.999985}
+        - {x: -1.4367676, y: -128.00002}
+        - {x: 126.56323, y: -128.00002}
+        - {x: 126.56323, y: 127.999985}
+    - name: Doors_3
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 71
+        width: 120
+        height: 304
+      alignment: 9
+      pivot: {x: 0.021075947, y: 0.44496045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 105.47089, y: 168.73203}
+        - {x: 96.47089, y: 165.73203}
+        - {x: 85.47089, y: 161.73203}
+        - {x: 39.470886, y: 144.73203}
+        - {x: 1.4708862, y: 130.73203}
+        - {x: -2.5291138, y: 128.73203}
+        - {x: -2.5291138, y: -133.26797}
+        - {x: -1.5291138, y: -134.26797}
+        - {x: 3.4708862, y: -134.26797}
+        - {x: 110.47089, y: -95.267975}
+        - {x: 117.47089, y: -92.267975}
+        - {x: 117.47089, y: 168.73203}
+    - name: Doors_4
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 76
+        width: 69
+        height: 312
+      alignment: 9
+      pivot: {x: 0.025556924, y: 0.4300501}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.7634277, y: 127.82437}
+        - {x: -1.7634277, y: -134.17563}
+        - {x: 11.236572, y: -134.17563}
+        - {x: 67.23657, y: -84.17563}
+        - {x: 67.23657, y: 177.82437}
+        - {x: 59.236572, y: 177.82437}
+        - {x: 10.236572, y: 152.82437}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
