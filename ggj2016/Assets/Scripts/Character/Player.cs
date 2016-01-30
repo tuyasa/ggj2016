@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	public AnimationCurve animCurve;
+	private Animator anim;
 
 	Controller2D controller;
 	Vector2 input;
@@ -17,12 +17,14 @@ public class Player : MonoBehaviour {
 	public float jumpMagnitude =20f;
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator>();
 		 controller = GetComponent<Controller2D>();
 		 facingRight = transform.localScale.x > 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		UpdateAnimator();
 		horizontalMovement();
 		if(Input.GetButtonDown("Jump"))
 			Jump();
@@ -55,5 +57,9 @@ public class Player : MonoBehaviour {
 	{
 		transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		facingRight = transform.localScale.x > 0;
+	}
+	private void UpdateAnimator()
+	{
+		anim.SetFloat("Speed",Mathf.Abs(controller.speed.x));
 	}
 }

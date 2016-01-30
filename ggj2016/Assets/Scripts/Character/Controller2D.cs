@@ -44,10 +44,8 @@ public class Controller2D : MonoBehaviour {
 	void LateUpdate () {
 
 		speed.y += Gravity * Time.deltaTime;
-<<<<<<< HEAD:ggj2016/Assets/Scripts/Character/Controller2DPlayer.cs
+
 		//Debug.Log(collisions);
-=======
->>>>>>> bd1e7da5c3cc463d508c2cb0c57e5b51f5d58619:ggj2016/Assets/Scripts/Character/Controller2D.cs
 		Move(speed * Time.deltaTime);
 
 		if(collisions.below || collisions.above)
