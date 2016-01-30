@@ -17,6 +17,9 @@ public class Player : MonoBehaviour {
 	public float gravity = -50f;
 	public float jumpMagnitude =20f;
 	public GameObject itemHolder;
+
+	public delegate void actionObject(GameObject go);
+	public actionObject a0;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();

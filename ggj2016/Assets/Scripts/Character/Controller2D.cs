@@ -41,7 +41,7 @@ public class Controller2D : MonoBehaviour {
 	}
 	
 	// Update is called once per fra
-	void LateUpdate () {
+	void FixedUpdate () {
 
 		speed.y += Gravity * Time.deltaTime;
 
