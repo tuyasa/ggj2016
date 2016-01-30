@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	Controller2DPlayer controller;
+	public AnimationCurve animCurve;
+
+	Controller2D controller;
 	Vector2 input;
 	float horizontalMove;
 	float smoothX;
@@ -15,7 +17,7 @@ public class Player : MonoBehaviour {
 	public float jumpMagnitude =20f;
 	// Use this for initialization
 	void Start () {
-		 controller = GetComponent<Controller2DPlayer>();
+		 controller = GetComponent<Controller2D>();
 		 facingRight = transform.localScale.x > 0;
 	}
 	
@@ -41,13 +43,13 @@ public class Player : MonoBehaviour {
 		float targetVelocityX = horizontalMove * moveSpeed;
 		controller.SetHorizontalForce(Mathf.SmoothDamp(controller.speed.x,targetVelocityX,ref smoothX,accelerationOnGround));
 	}
+
 	public void Jump()
 	{
 		if(controller.collisions.below)
 		{
 			controller.SetVerticalForce(jumpMagnitude);
 		}
-
 	}
 	void Flip()
 	{

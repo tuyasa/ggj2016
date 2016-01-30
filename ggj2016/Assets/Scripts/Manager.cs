@@ -130,7 +130,7 @@ public class Manager : MonoBehaviour {
         while(t>0)
         {
             graphic.SetAlpha(Mathf.Lerp(0, target,1-(t/time)));
-            t -= Time.deltaTime;
+            t -= Time.unscaledDeltaTime;
             yield return null;
         }
 
@@ -144,7 +144,7 @@ public class Manager : MonoBehaviour {
         while (t > 0)
         {
             graphic.SetAlpha(Mathf.Lerp(source,0,1-(t/time)));
-            t -= Time.deltaTime;
+            t -= Time.unscaledDeltaTime;
             yield return null;
         }
 
@@ -159,7 +159,7 @@ public class Manager : MonoBehaviour {
         while(t>0)
         {
             blackRenderer.material.SetFloat("_Visibility", 1 - (t / time));
-            t -= Time.deltaTime;
+            t -= Time.unscaledDeltaTime;
             yield return null;
         }
         blackRenderer.material.SetFloat("_Visibility", 1);
@@ -171,7 +171,7 @@ public class Manager : MonoBehaviour {
         while (t > 0)
         {
             blackRenderer.material.SetFloat("_Visibility",t / time);
-            t -= Time.deltaTime;
+            t -= Time.unscaledDeltaTime;
             yield return null;
         }
         blackRenderer.material.SetFloat("_Visibility",0);
