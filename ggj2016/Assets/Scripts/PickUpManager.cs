@@ -54,6 +54,8 @@ public class PickUpManager : MonoBehaviour {
 
 		// Find place where he stands
 
+
+
 	}
 
 }
