@@ -6,8 +6,8 @@ using System;
 
 public class HouseManager : MonoBehaviour {
 
-    private static HouseManager instance;
-
+    public static HouseManager instance;
+    public Transform player;
 	public List<GameObject> gos;
     List<Item> items = new List<Item>(30);
     List<Room> rooms = new List<Room>(11);
