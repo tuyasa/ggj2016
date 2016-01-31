@@ -7,6 +7,11 @@ public class DoorAnimator : MonoBehaviour {
 
     public Sprite[] sprites;
     SpriteRenderer sr;
+    private  BoxCollider2D boxCollider;
+    public void Awake(){
+    	gameObject.AddComponent<BoxCollider2D>();
+    	boxCollider =GetComponent<BoxCollider2D>();
+    }
     public void OnEnable()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -32,6 +37,7 @@ public class DoorAnimator : MonoBehaviour {
             sr.sprite = sprites[i++];
             yield return null;
         }
+        boxCollider.enabled = false;
     }
 
     public IEnumerator PlayAnimRoutineInverse()
@@ -42,21 +48,6 @@ public class DoorAnimator : MonoBehaviour {
             sr.sprite = sprites[i--];
             yield return null;
         }
+		boxCollider.enabled = true;
     }
-//    void OnTriggerEnter2D(Collider2D other)
-//    {
-//    	Player player = other.GetComponent<Player>();
-//    	if(player== null)
-//    		return;
-//    	PlayAnim();
-//    	if(twin != null)
-//    		twin.PlayAnim();
-//    }
-//	void OnTriggerExit2D(Collider2D other)
-//    {
-//    	Player player = other.GetComponent<Player>();
-//    	if(player== null)
-//    		return;
-//    	PlayAnimInverse();
-//    }
 }

@@ -42,8 +42,14 @@ public class Player : MonoBehaviour
 		if (!freeze)
 			horizontalMovement ();
 		teleport = false;
-		if (Input.GetButtonDown ("Fire1"))
+		if (Input.GetButtonDown ("Fire1"))			
+		{
 			teleport = true;
+		}
+		if(Input.GetButtonDown("Fire2"))
+		{
+			GetComponent<SlamDoor>().slam();
+		}
 		if (Input.GetButtonDown ("Jump") && canJump)
 			Jump ();
 	}
