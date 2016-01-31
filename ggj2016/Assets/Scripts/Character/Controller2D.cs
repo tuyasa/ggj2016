@@ -12,7 +12,9 @@ public class Controller2D : MonoBehaviour {
 
 	public int horizontalRayCount;
 	public int verticalRayCount;
+	[HideInInspector]
 	public float verticalRaySpacing;
+	[HideInInspector]
 	public float horizontalRaySpacing;
 
 	private float Gravity = -20f;

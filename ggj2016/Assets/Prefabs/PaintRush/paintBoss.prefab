@@ -43,9 +43,14 @@ MonoBehaviour:
   localWayPoints:
   - {x: 0, y: -6}
   - {x: 0, y: 6}
-  globalWaypoint: []
+  globalWaypoints: []
   speed: 4
+  wayPointIndex: 0
+  percentageBetweenPoints: 0
   itemsToThrow: {fileID: 139244, guid: 9c930e8977f9a4d2da11c7d0e1190d2a, type: 2}
+  maxWaitFireRate: 0.5
+  minWaitFireRate: 0.1
+  nextFire: 0
 --- !u!212 &21202600
 SpriteRenderer:
   m_ObjectHideFlags: 1

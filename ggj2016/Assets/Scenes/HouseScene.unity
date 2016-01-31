@@ -12774,6 +12774,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1460618268 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 127244, guid: bc1d6a77ffc7ac745b3bab7f1a7b1bdf, type: 2}
+  m_PrefabInternal: {fileID: 1951258919}
+--- !u!114 &1460618269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460618268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdbc04b47f8024153831e4c5042d518a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1482706501
 GameObject:
   m_ObjectHideFlags: 0
@@ -15723,6 +15738,10 @@ Prefab:
     - target: {fileID: 11454198, guid: bc1d6a77ffc7ac745b3bab7f1a7b1bdf, type: 2}
       propertyPath: slamCollider
       value: 
+      objectReference: {fileID: 1460618268}
+    - target: {fileID: 5023142, guid: bc1d6a77ffc7ac745b3bab7f1a7b1bdf, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc1d6a77ffc7ac745b3bab7f1a7b1bdf, type: 2}

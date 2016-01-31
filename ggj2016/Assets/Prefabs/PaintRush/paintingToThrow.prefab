@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21298256}
   - 50: {fileID: 5015736}
   - 61: {fileID: 6163540}
+  - 114: {fileID: 11462462}
   m_Layer: 0
   m_Name: paintingToThrow
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 139244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,6 +62,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.89, y: 0.93}
+--- !u!114 &11462462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7732d02d545ab4357a77e1c5a3d2835c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21298256
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -97,7 +109,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139244}

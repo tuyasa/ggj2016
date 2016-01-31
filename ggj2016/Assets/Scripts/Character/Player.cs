@@ -26,9 +26,12 @@ public class Player : MonoBehaviour
 	public bool teleport;
 	public bool freeze;
 	public bool canJump;
+
+	public int score;
 	// Use this for initialization
 	void Start ()
 	{
+		score = 0;
 		canJump = true;
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<Controller2D> ();
