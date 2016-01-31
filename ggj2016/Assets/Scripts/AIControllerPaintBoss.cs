@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AIController : MonoBehaviour {
+public class AIControllerPaintBoss : MonoBehaviour {
 
 	public Vector2 [] localWayPoints;
- 	public Vector2[] globalWaypoints;
+ 	private Vector2[] globalWaypoints;
  
 	public float speed;
 	private int wayPointIndex;
@@ -12,12 +12,18 @@ public class AIController : MonoBehaviour {
 
 	public GameObject itemsToThrow;
 
-	public float maxWaitFireRate =0.5f;
-	public float minWaitFireRate = 0.1f;
+	public float maxWaitFireRate =0.8f;
+	public float minWaitFireRate = 0.2f;
 	private float nextFire = 0f;
+
+	// Set in the manager number of painting to get 
+	public int paintingToThrow;
+
+	private int ammo;
 
 	// Use this for initialization
 	void Start () {
+		ammo = paintingToThrow;
 		globalWaypoints = new Vector2[localWayPoints.Length];
 		for (int i = 0; i < localWayPoints.Length; i++) {
 			globalWaypoints[i] = localWayPoints[i] + (Vector2)transform.position;
@@ -27,7 +33,7 @@ public class AIController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Time.time > nextFire)
+		if(Time.time > nextFire && ammo > 0)
 		{
 			StartCoroutine(ThrowStuff());
 			nextFire = Time.time + Random.Range(minWaitFireRate,maxWaitFireRate);
@@ -49,7 +55,9 @@ public class AIController : MonoBehaviour {
 		if(percentageBetweenPoints ==1)
 		{
 			percentageBetweenPoints = 0;
-			wayPointIndex++;
+//			wayPointIndex++;
+			wayPointIndex = Random.Range(0,globalWaypoints.Length);
+			nextFire += maxWaitFireRate;
 		}
 
 
@@ -71,7 +79,7 @@ public class AIController : MonoBehaviour {
 
 	IEnumerator ThrowStuff()
 	{
-		
+		ammo--;
 		GameObject go = Instantiate(itemsToThrow,transform.position,Quaternion.identity) as GameObject;
 		Rigidbody2D rgbd = go.GetComponent<Rigidbody2D>();
 		rgbd.AddForce(Vector2.down * 40,ForceMode2D.Impulse);
