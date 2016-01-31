@@ -511,7 +511,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11471576, guid: 2ee64bd49e7664fe09fe92958db8e4ff, type: 2}
       propertyPath: moveSpeed
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11471576, guid: 2ee64bd49e7664fe09fe92958db8e4ff, type: 2}
       propertyPath: jumpMagnitude
@@ -1505,7 +1505,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1116099581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1903121, y: 5.906832, z: -10}
+  m_LocalPosition: {x: 2.1903121, y: 2.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1390756365}

@@ -32,6 +32,7 @@ GameObject:
   - 114: {fileID: 11456508}
   - 114: {fileID: 11454198}
   - 114: {fileID: 11487950}
+  - 114: {fileID: 11429040}
   m_Layer: 0
   m_Name: CharacterAnimRoot
   m_TagString: Untagged
@@ -65,7 +66,6 @@ GameObject:
   - 4: {fileID: 467604}
   - 61: {fileID: 6132046}
   - 114: {fileID: 11400576}
-  - 114: {fileID: 11440170}
   m_Layer: 0
   m_Name: SlamCollider
   m_TagString: Untagged
@@ -121,6 +121,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &167888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 498182}
+  m_Layer: 0
+  m_Name: holdPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &170174
 GameObject:
   m_ObjectHideFlags: 1
@@ -132,21 +147,6 @@ GameObject:
   - 212: {fileID: 21219054}
   m_Layer: 0
   m_Name: LeftFoot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &171542
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 498706}
-  m_Layer: 0
-  m_Name: holdPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,17 +311,17 @@ Transform:
   m_Children:
   - {fileID: 460256}
   - {fileID: 467604}
-  - {fileID: 498706}
+  - {fileID: 498182}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &498706
+--- !u!4 &498182
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 171542}
+  m_GameObject: {fileID: 167888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 2.24, z: 0}
+  m_LocalPosition: {x: 0.72, y: 2.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496734}
@@ -415,13 +415,31 @@ MonoBehaviour:
   moveSpeed: 8
   gravity: -50
   jumpMagnitude: 20
-  itemHolder: {fileID: 171542}
   verticalMove: 0
   teleport: 0
   freeze: 0
   canJump: 0
   canOpenDoor: 0
   score: 0
+--- !u!114 &11429040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e5bb57be29f4500ac74a068fd93907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdPositon: {fileID: 498182}
+  currentItem: {fileID: 0}
+  pickUpItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rooms: []
+  maxDistanceToPickUp: 1
 --- !u!114 &11433844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -441,17 +459,6 @@ MonoBehaviour:
   verticalRaySpacing: 0
   horizontalRaySpacing: 0
   speed: {x: 0, y: 0}
---- !u!114 &11440170
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91c2c70b509644babb33db6df9087de0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11454198
 MonoBehaviour:
   m_ObjectHideFlags: 1

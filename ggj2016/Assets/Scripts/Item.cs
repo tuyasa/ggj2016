@@ -6,6 +6,9 @@ public class Item : MonoBehaviour {
 	public string name;
 	ParticleSystem ps;
 
+    public Vector3 originalPosition;
+    public Room originalRoom;
+
 	// Use this for initialization
 	void Start () {
 		ps = GetComponentInChildren<ParticleSystem> ();

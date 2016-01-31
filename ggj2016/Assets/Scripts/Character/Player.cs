@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
 	public float moveSpeed;
 	public float gravity = -50f;
 	public float jumpMagnitude = 20f;
-	public GameObject itemHolder;
 
 	public delegate void actionObject (GameObject go);
 
@@ -35,9 +34,12 @@ public class Player : MonoBehaviour
 
 	[HideInInspector]
 	public int score;
+	private PickUpManager pickUpM;
+
 	// Use this for initialization
 	void Start ()
 	{
+		pickUpM = GetComponent<PickUpManager>();
 		score = 0;
 		canJump = true;
 		canOpenDoor = true;
@@ -57,9 +59,20 @@ public class Player : MonoBehaviour
 		{
 			teleport = true;
 		}
-		if(Input.GetButtonDown("Fire2") && canOpenDoor)
+		if(Input.GetButtonDown("Fire2"))
+		{			
+			if(canOpenDoor)
+				GetComponent<SlamDoor>().slam();
+		}
+		if(Input.GetButtonDown("Fire3"))
 		{
-			GetComponent<SlamDoor>().slam();
+			if(pickUpM.currentItem == null && pickUpM.FindNearestObject() != null)
+			{
+				pickUpM.PickUpObjectNearestObject();
+			}
+			else if(pickUpM.currentItem != null){
+				pickUpM.DropOffCurrentObject();
+			}
 		}
 		if (Input.GetButtonDown ("Jump") && canJump)
 			Jump ();

@@ -55,7 +55,9 @@ public class AIControllerPaintBoss : MonoBehaviour {
 		if(percentageBetweenPoints ==1)
 		{
 			percentageBetweenPoints = 0;
-			wayPointIndex++;
+//			wayPointIndex++;
+			wayPointIndex = Random.Range(0,globalWaypoints.Length);
+			nextFire += maxWaitFireRate;
 		}
 
 

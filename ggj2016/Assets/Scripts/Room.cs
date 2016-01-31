@@ -6,7 +6,7 @@ public class Room : MonoBehaviour {
     public Bounds _bounds;
     Bounds bounds {
         get {
-            if(_bounds.size == Vector3.zero)
+            if(_bounds.extents == Vector3.zero)
                 _bounds = GetBounds();
 
             return _bounds;
