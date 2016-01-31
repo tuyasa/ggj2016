@@ -4,17 +4,20 @@ using System.Collections;
 public class DoorAnimator : MonoBehaviour
 {
 
-	bool doorOpened = false;
+    public bool doorOpened {
+        get;
+        private set;
+    }
 
-	public DoorAnimator twin;
+
+    public DoorAnimator twin;
 
 	public Sprite[] sprites;
 	SpriteRenderer sr;
 	private  BoxCollider2D boxCollider;
 
-	public void Awake ()
-	{
-		boxCollider = gameObject.AddComponent<BoxCollider2D> ();
+	public void Awake () {
+        boxCollider = gameObject.AddComponent<BoxCollider2D> ();
 		boxCollider.isTrigger = true;
 	}
 
@@ -48,6 +51,7 @@ public class DoorAnimator : MonoBehaviour
 		int i = 0;
 		while (i < sprites.Length) {
 			sr.sprite = sprites [i++];
+            sr.sortingOrder = 30;
 			yield return null;
 		}
 		boxCollider.gameObject.layer = 0;
@@ -59,7 +63,8 @@ public class DoorAnimator : MonoBehaviour
 		int i = sprites.Length - 1;
 		while (i >= 0) {
 			sr.sprite = sprites [i--];
-			yield return null;
+            sr.sortingOrder = 4;
+            yield return null;
 		}
 
 		boxCollider.gameObject.layer = 8;

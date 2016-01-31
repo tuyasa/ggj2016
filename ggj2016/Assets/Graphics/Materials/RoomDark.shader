@@ -1,12 +1,13 @@
-﻿Shader "Custom/RoomBlack" {
+﻿Shader "Custom/RoomDark" {
 	Properties{
 		_MainTex("Texture", 2D) = "white" {}
 		_Alpha1("AlphaDoor", 2D) = "white" {}
-		[Toggle] _DoorPosition("DoorPosition", float) = 0 //0 or 1 for the side of the door which is being opened
+		_DoorPosition("DoorPosition", float) = 0 //0 or 1 for the side of the door which is being opened
 		_Visibility("visibility", float) = 1
 	}
 		SubShader{
 		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
+		LOD 200
 		Cull Off
 
 		CGPROGRAM

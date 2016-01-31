@@ -5,7 +5,7 @@ public class CameraController : MonoBehaviour {
 	
 	public Transform target;
 	public bool lockCamera;
-    bool cameraStatus = false;//False = Out, True = In
+    bool cameraStatus = true;//False = Out, True = In // We start zoomed in
 	// Use this for initialization
 	void Start () {
 		

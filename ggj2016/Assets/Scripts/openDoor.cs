@@ -23,6 +23,6 @@ public class openDoor : MonoBehaviour {
 		if(door == null) return;
 		gameObject.SetActive(false);
 		door.ToggleDoor();
-		door.twin.ToggleDoor();
+		if(door.twin) door.twin.ToggleDoor();
 	}
 }
