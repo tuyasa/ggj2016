@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bloc2 : MonoBehaviour {
+public class bloc3 : MonoBehaviour {
 	Rigidbody2D rb;
 	bool b = false;
 	// Use this for initialization
@@ -13,7 +13,7 @@ public class bloc2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(b)
-			transform.Translate (new Vector2 (5, 0)*Time.deltaTime);
+			transform.Translate (new Vector2 (-5, 0)*Time.deltaTime);
 	}
 
 	public bool getmvd(){
@@ -23,7 +23,7 @@ public class bloc2 : MonoBehaviour {
 	IEnumerator mve(){
 		yield return new WaitForSeconds (0.5f);
 		b = true;
-		if (transform.position.x > 80)
+		if (transform.position.x < -30)
 			Destroy (gameObject);
 	}
 	

@@ -19,6 +19,5 @@ public class killz : MonoBehaviour {
 	{
 		if (other.GetComponent<Player>()!= null && b2.getmvd())
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
-		Debug.Log ("Success");
 	}
 }
