@@ -22,14 +22,25 @@ public class Player : MonoBehaviour
 	public delegate void actionObject (GameObject go);
 
 	public actionObject a0;
+	[HideInInspector]
 	public float verticalMove;
+	[HideInInspector]
 	public bool teleport;
+	[HideInInspector]
 	public bool freeze;
+	[HideInInspector]
 	public bool canJump;
+
+	public bool canOpenDoor;
+
+	[HideInInspector]
+	public int score;
 	// Use this for initialization
 	void Start ()
 	{
+		score = 0;
 		canJump = true;
+		canOpenDoor = true;
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<Controller2D> ();
 		facingRight = transform.localScale.x > 0;
@@ -46,7 +57,7 @@ public class Player : MonoBehaviour
 		{
 			teleport = true;
 		}
-		if(Input.GetButtonDown("Fire2"))
+		if(Input.GetButtonDown("Fire2") && canOpenDoor)
 		{
 			GetComponent<SlamDoor>().slam();
 		}
