@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class Room : MonoBehaviour
 {
 
 	public string roomName;
+	public bool completed = false;
 	public Bounds _bounds;
-
+	public List<Item> itemsInRoom = new List<Item>();
 	Bounds bounds {
 		get {
 			if (_bounds.extents == Vector3.zero)
@@ -40,13 +42,16 @@ public class Room : MonoBehaviour
 
 	void Start ()
 	{
-		
+		foreach (var item in GetComponentsInChildren<Item>()) {
+			itemsInRoom.Add(item);
+		}
 	}
 
 	public bool FogVisible = false;
 
 	public void Update ()
 	{
+		
 		bool doorwasOpened = false;
 		foreach (var door in doors) {
 			doorwasOpened = door.doorOpened ? true : doorwasOpened;
@@ -54,7 +59,8 @@ public class Room : MonoBehaviour
 
 		if (roomBlack) {
 			bool COntainsPlayer = bounds.Contains (HouseManager.instance.player.position);
-			if (doorwasOpened || COntainsPlayer) {
+			if (doorwasOpened || COntainsPlayer || completed) {
+				
 				DisappearFog ();
 			} else if (!doorwasOpened) {
 				AppearFog ();

@@ -16,11 +16,12 @@ public class Item : MonoBehaviour {
 		ps = GetComponentInChildren<ParticleSystem> ();
 		originalLocalScale = transform.localScale;
 	}
+
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		
 	}
 
 	//lancer HighLight pour envoyer 10 particules

@@ -42,18 +42,11 @@ public class PickUpManager : MonoBehaviour
 			currentItem = pickItem;
 		currentItem.transform.parent = holdPositon;
 		currentItem.transform.localPosition = Vector3.zero;
-	
 	}
 
 	public void DropOffCurrentObject ()
 	{
-//		Transform newParent = HouseManager.GetRoom(transform.position).transform;
-//		Debug.Log(newParent);
-		
 		HouseManager.DropItem (currentItem, transform.position);
-
-//		if(newParent != null)
-//			currentItem.transform.SetParent(newParent);
 		currentItem = null;
 	}
 
