@@ -11,8 +11,6 @@ public class DoorAnimator : MonoBehaviour {
     SpriteRenderer sr;
     private  BoxCollider2D boxCollider;
 
-    public LayerMask mask;
-
     public void Awake(){
         boxCollider = gameObject.AddComponent<BoxCollider2D>();
         boxCollider.isTrigger = true;
@@ -62,7 +60,6 @@ public class DoorAnimator : MonoBehaviour {
         }
 
         boxCollider.gameObject.layer = 8;
-        
         doorOpened = false;
     }
 }
