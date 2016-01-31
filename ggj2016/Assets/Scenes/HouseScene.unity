@@ -701,7 +701,7 @@ GameObject:
   - 4: {fileID: 104839050}
   - 212: {fileID: 104839052}
   - 114: {fileID: 104839051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,6 +739,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &104839052
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2296,6 +2299,18 @@ Prefab:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 11473450, guid: f17a09dfc69194d48866b8f7f5b68cff, type: 2}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497390, guid: f17a09dfc69194d48866b8f7f5b68cff, type: 2}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 148464, guid: f17a09dfc69194d48866b8f7f5b68cff, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f17a09dfc69194d48866b8f7f5b68cff, type: 2}
   m_IsPrefabParent: 0
@@ -2395,7 +2410,7 @@ GameObject:
   - 4: {fileID: 290817664}
   - 212: {fileID: 290817663}
   - 114: {fileID: 607565373}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3488,7 +3503,7 @@ GameObject:
   - 4: {fileID: 398988695}
   - 212: {fileID: 398988697}
   - 114: {fileID: 398988696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3526,6 +3541,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &398988697
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4376,7 +4394,7 @@ GameObject:
   - 4: {fileID: 549169342}
   - 212: {fileID: 549169344}
   - 114: {fileID: 549169343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4414,6 +4432,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &549169344
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4715,6 +4736,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &613316343
 GameObject:
   m_ObjectHideFlags: 0
@@ -4725,7 +4749,7 @@ GameObject:
   - 4: {fileID: 613316346}
   - 212: {fileID: 613316345}
   - 114: {fileID: 613316344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4751,6 +4775,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &613316345
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7809,6 +7836,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &804199088 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 127244, guid: bc1d6a77ffc7ac745b3bab7f1a7b1bdf, type: 2}
+  m_PrefabInternal: {fileID: 1951258919}
+--- !u!114 &804199089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 804199088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdbc04b47f8024153831e4c5042d518a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &816099074
 GameObject:
   m_ObjectHideFlags: 0
@@ -8548,6 +8590,22 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11452206, guid: 32d942776e70a1d4fba3a6370051bdbc, type: 2}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462076, guid: 32d942776e70a1d4fba3a6370051bdbc, type: 2}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 178072, guid: 32d942776e70a1d4fba3a6370051bdbc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 167734, guid: 32d942776e70a1d4fba3a6370051bdbc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32d942776e70a1d4fba3a6370051bdbc, type: 2}
   m_IsPrefabParent: 0
@@ -8766,6 +8824,22 @@ Prefab:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 11444922, guid: 793819c4471f78c409261913eaf28430, type: 2}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405862, guid: 793819c4471f78c409261913eaf28430, type: 2}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 191458, guid: 793819c4471f78c409261913eaf28430, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 186346, guid: 793819c4471f78c409261913eaf28430, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 793819c4471f78c409261913eaf28430, type: 2}
   m_IsPrefabParent: 0
@@ -8788,6 +8862,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &890243241
 GameObject:
   m_ObjectHideFlags: 0
@@ -9411,7 +9488,7 @@ GameObject:
   - 4: {fileID: 957374513}
   - 212: {fileID: 957374515}
   - 114: {fileID: 957374514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9449,6 +9526,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &957374515
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9699,7 +9779,7 @@ GameObject:
   - 212: {fileID: 983507198}
   - 114: {fileID: 888740731}
   - 61: {fileID: 983507197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9861,7 +9941,7 @@ GameObject:
   - 4: {fileID: 1002384287}
   - 212: {fileID: 1002384289}
   - 114: {fileID: 1002384288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9899,6 +9979,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &1002384289
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10116,7 +10199,7 @@ GameObject:
   - 4: {fileID: 1032639893}
   - 212: {fileID: 1032639895}
   - 114: {fileID: 1032639894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10154,6 +10237,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &1032639895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10314,7 +10400,7 @@ GameObject:
   - 4: {fileID: 1078018325}
   - 212: {fileID: 1078018327}
   - 114: {fileID: 1078018326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10352,6 +10438,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &1078018327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10659,7 +10748,7 @@ GameObject:
   - 4: {fileID: 1172121354}
   - 212: {fileID: 1172121353}
   - 114: {fileID: 1172121355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10728,6 +10817,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1182757771
 GameObject:
   m_ObjectHideFlags: 0
@@ -11781,7 +11873,7 @@ GameObject:
   - 4: {fileID: 1322079799}
   - 212: {fileID: 1322079801}
   - 114: {fileID: 1322079800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11819,6 +11911,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &1322079801
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11977,7 +12072,7 @@ GameObject:
   - 4: {fileID: 1344137368}
   - 212: {fileID: 1344137370}
   - 114: {fileID: 1344137369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12015,6 +12110,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &1344137370
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15723,7 +15821,7 @@ Prefab:
     - target: {fileID: 11454198, guid: bc1d6a77ffc7ac745b3bab7f1a7b1bdf, type: 2}
       propertyPath: slamCollider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 804199088}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc1d6a77ffc7ac745b3bab7f1a7b1bdf, type: 2}
   m_IsPrefabParent: 0
@@ -15913,7 +16011,7 @@ GameObject:
   - 114: {fileID: 1987773403}
   - 212: {fileID: 1987773402}
   - 68: {fileID: 1987773401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grenier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16587,7 +16685,7 @@ GameObject:
   - 4: {fileID: 2063009487}
   - 212: {fileID: 2063009489}
   - 114: {fileID: 2063009488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doors_4 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16625,6 +16723,9 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300002, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
   - {fileID: 21300000, guid: d1ac307a92646044aa79d4e5a813cf7c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &2063009489
 SpriteRenderer:
   m_ObjectHideFlags: 0

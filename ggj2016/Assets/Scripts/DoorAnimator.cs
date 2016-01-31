@@ -3,18 +3,29 @@ using System.Collections;
 
 public class DoorAnimator : MonoBehaviour {
 
+    bool doorOpened = false;
+
     public DoorAnimator twin;
 
     public Sprite[] sprites;
     SpriteRenderer sr;
     private  BoxCollider2D boxCollider;
+
+    public LayerMask mask;
+
     public void Awake(){
-    	gameObject.AddComponent<BoxCollider2D>();
-    	boxCollider =GetComponent<BoxCollider2D>();
+        boxCollider = gameObject.AddComponent<BoxCollider2D>();
+        boxCollider.isTrigger = true;
     }
     public void OnEnable()
     {
         sr = GetComponent<SpriteRenderer>();
+    }
+
+    public void ToggleDoor()
+    {
+        if(!doorOpened) StartCoroutine(PlayAnimRoutine());
+        else StartCoroutine(PlayAnimRoutineInverse());
     }
 
     [ContextMenu("PlayAnim")]
@@ -37,7 +48,8 @@ public class DoorAnimator : MonoBehaviour {
             sr.sprite = sprites[i++];
             yield return null;
         }
-        boxCollider.enabled = false;
+        boxCollider.gameObject.layer = 0;
+        doorOpened = true;
     }
 
     public IEnumerator PlayAnimRoutineInverse()
@@ -48,6 +60,9 @@ public class DoorAnimator : MonoBehaviour {
             sr.sprite = sprites[i--];
             yield return null;
         }
-		boxCollider.enabled = true;
+
+        boxCollider.gameObject.layer = 8;
+        
+        doorOpened = false;
     }
 }

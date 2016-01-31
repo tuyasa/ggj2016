@@ -13,6 +13,6 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!lockCamera)
-			transform.position = target.position + -10 * Vector3.forward;// + Vector3.up*5;
+			transform.position = target.position + -50 * Vector3.forward;// + Vector3.up*5;
 	}
 }
