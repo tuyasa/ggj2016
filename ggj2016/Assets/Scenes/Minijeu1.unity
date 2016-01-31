@@ -374,7 +374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
       propertyPath: m_LocalScale.x
@@ -822,7 +822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496734, guid: 795a9fe679734c945bd95a5a4d5f5e59, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 496734, guid: 795a9fe679734c945bd95a5a4d5f5e59, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1044,6 +1044,64 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &770991666
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1083738983}
+    m_Modifications:
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -12.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 34.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 125894, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_Name
+      value: bloc (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193700, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+      propertyPath: m_Size.x
+      value: 9.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &782442888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1187,10 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!4 &857613020 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
+  m_PrefabInternal: {fileID: 770991666}
 --- !u!4 &858680616 stripped
 Transform:
   m_PrefabParentObject: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
@@ -1236,7 +1298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 430400, guid: c9e29ff663228bf409e76a0ff400d647, type: 2}
       propertyPath: m_LocalScale.x
@@ -1298,6 +1360,7 @@ Transform:
   - {fileID: 66207635}
   - {fileID: 2018420798}
   - {fileID: 1291426623}
+  - {fileID: 857613020}
   - {fileID: 1352699903}
   - {fileID: 1065667859}
   m_Father: {fileID: 0}
