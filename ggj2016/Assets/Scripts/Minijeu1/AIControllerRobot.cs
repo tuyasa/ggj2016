@@ -19,11 +19,11 @@ public class AIControllerRobot : MonoBehaviour {
 	float percentageBetweenPoints;
 	// Use this for initialization
 	void Start () {
-
 		globalWaypoint = new Vector2[Pattern1.Length];
 		for (int i = 0; i < Pattern1.Length; i++) {
 			globalWaypoint[i] = Pattern1[i] + (Vector2)transform.position;
 		}
+
 		StartCoroutine ("bossPat");
 	}
 
@@ -35,16 +35,15 @@ public class AIControllerRobot : MonoBehaviour {
 	}
 
 	IEnumerator bossPat(){
-		//un peu d'attente avant le départ du boss
-		yield return new WaitForSeconds(2f);
-
+		
 		while (wayPointIndex != globalWaypoint.Length - 1) {
 			yield return null;
 		}//On attend la fin du pattern
 		/*Entre 2 WP*/
 
-		for (int i = 0; i < Pattern2.Length; i++) {
-			globalWaypoint[i] = Pattern2[i] + (Vector2)transform.position;		}
+		/*Changer le pattern courant en changeant Pattern1 en Pattern2,3,42,69,666....*/
+		for (int i = 0; i < Pattern1.Length; i++) {
+			globalWaypoint[i] = Pattern1[i] + (Vector2)transform.position;		}
 		wayPointIndex = 0;
 
 		while (wayPointIndex != globalWaypoint.Length - 1) {
@@ -57,7 +56,7 @@ public class AIControllerRobot : MonoBehaviour {
 	{
 		bullet = Instantiate(prefab_bullet,transform.position+new Vector3(5,7,0), Quaternion.identity) as GameObject;
 
-		bullet.GetComponentInChildren<Rigidbody2D>().AddForce (new Vector2(1500f,0f));
+		bullet.GetComponentInChildren<Rigidbody2D>().AddForce (new Vector2(1100f,0f));
 		Destroy (bullet, 5f);
 
 	}
@@ -102,7 +101,7 @@ public class AIControllerRobot : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D o){
-		if (o.GetComponents<Player> ()!= null) {
+		if (o.GetComponent<Player> ()!= null) {
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 			o.GetComponent<Rigidbody2D> ().MovePosition (new Vector2 (-38.5f,48f));
 		}
