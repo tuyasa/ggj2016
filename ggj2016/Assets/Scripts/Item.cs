@@ -2,8 +2,11 @@
 using System.Collections;
 
 public class Item : MonoBehaviour {
+<<<<<<< HEAD
+=======
 
 	public string name;
+>>>>>>> fbdb4d2f215dc76a63a96b592e66af304c88b9fc
 	ParticleSystem ps;
 
     public Vector3 originalPosition;

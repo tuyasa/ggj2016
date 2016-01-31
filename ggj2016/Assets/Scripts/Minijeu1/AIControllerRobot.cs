@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class AIController1 : MonoBehaviour {
+public class AIControllerRobot : MonoBehaviour {
 	
 	public GameObject prefab_bullet;
 	GameObject bullet;
+
 	public Vector2 []Pattern1;
 	public Vector2 []Pattern2;
 	public Vector2 []Pattern3;
@@ -17,8 +19,6 @@ public class AIController1 : MonoBehaviour {
 	float percentageBetweenPoints;
 	// Use this for initialization
 	void Start () {
-		
-
 
 		globalWaypoint = new Vector2[Pattern1.Length];
 		for (int i = 0; i < Pattern1.Length; i++) {
@@ -35,26 +35,31 @@ public class AIController1 : MonoBehaviour {
 	}
 
 	IEnumerator bossPat(){
+		//un peu d'attente avant le départ du boss
+		yield return new WaitForSeconds(2f);
+
 		while (wayPointIndex != globalWaypoint.Length - 1) {
 			yield return null;
 		}//On attend la fin du pattern
 		/*Entre 2 WP*/
 
-		globalWaypoint = Pattern2;
+		for (int i = 0; i < Pattern2.Length; i++) {
+			globalWaypoint[i] = Pattern2[i] + (Vector2)transform.position;		}
 		wayPointIndex = 0;
 
 		while (wayPointIndex != globalWaypoint.Length - 1) {
 			yield return null;
-		}//On attend la fin du pattern
 
-		globalWaypoint = Pattern3; 
-		wayPointIndex = 0;	
+		}//On attend la fin du pattern
 }
+
 	void boss_shoot()
 	{
 		bullet = Instantiate(prefab_bullet,transform.position+new Vector3(5,7,0), Quaternion.identity) as GameObject;
 
 		bullet.GetComponentInChildren<Rigidbody2D>().AddForce (new Vector2(1500f,0f));
+		Destroy (bullet, 5f);
+
 	}
 
 	Vector3 CalculateVelocity()	{
@@ -93,6 +98,13 @@ public class AIController1 : MonoBehaviour {
 				Gizmos.DrawLine (globalWayPointPos + Vector2.left * size, globalWayPointPos + Vector2.right * size);
 
 			}
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D o){
+		if (o.GetComponents<Player> ()!= null) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+			o.GetComponent<Rigidbody2D> ().MovePosition (new Vector2 (-38.5f,48f));
 		}
 	}
 

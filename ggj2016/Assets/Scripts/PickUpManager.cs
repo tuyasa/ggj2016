@@ -48,12 +48,11 @@ public class PickUpManager : MonoBehaviour {
 	{
 		Transform newParent = FindRoom();
 		Debug.Log(newParent);
-        HouseManager.DropItem(currentItem);
+       	        HouseManager.DropItem(currentItem);
 		if(newParent != null)
 			currentItem.transform.SetParent(newParent);
 		currentItem = null;
-
-        // Find place where he stands
+	
 	}
 
 }
