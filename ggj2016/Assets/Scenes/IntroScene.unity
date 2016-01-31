@@ -224,12 +224,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Le Lorem Ipsum est simplement du faux texte employ\xE9 dans la composition
-    et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard
-    de l'imprimerie depuis les ann\xE9es 1500, quand un peintre anonyme assembla ensemble
-    des morceaux de texte pour r\xE9aliser un livre sp\xE9cimen de polices de texte.
-    Il n'a pas fait que survivre cinq si\xE8cles, mais s'est aussi adapt\xE9 \xE0
-    la bureautique informatique, sans"
+  m_Text: 'Your name is Willy very tense guy living in a house with a crazy ghost.
+
+    In this you must place the objects in the right room in order to exit the house.
+
+'
 --- !u!222 &167225674
 CanvasRenderer:
   m_ObjectHideFlags: 0
