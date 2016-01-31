@@ -14,14 +14,15 @@ public class openDoor : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-        gameObject.SetActive(false);
+        
 
-        Debug.Log(other.gameObject.name);
-        Debug.Log(other.isTrigger);
-        Debug.Log(other.enabled);
-
+//        Debug.Log(other.gameObject.name);
+//        Debug.Log(other.isTrigger);
+//        Debug.Log(other.enabled);
+	
         DoorAnimator door = other.GetComponent<DoorAnimator>();
 		if(door == null) return;
+		gameObject.SetActive(false);
 		door.ToggleDoor();
 		door.twin.ToggleDoor();
 	}

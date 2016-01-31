@@ -9,3 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
   - enabled: 1
     path: Assets/Scenes/HouseScene.unity
+  - enabled: 1
+    path: Assets/Scenes/PaintRush.unity
+  - enabled: 1
+    path: Assets/Scenes/Minijeu1.unity
+  - enabled: 1
+    path: Assets/Scenes/BossScene.unity
+  - enabled: 1
+    path: Assets/Scenes/Boboss.unity
