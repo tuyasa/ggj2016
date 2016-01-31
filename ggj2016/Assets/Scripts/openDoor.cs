@@ -12,11 +12,17 @@ public class openDoor : MonoBehaviour {
 	void Update () {
 	
 	}
+
 	void OnTriggerEnter2D(Collider2D other){
-		DoorAnimator door = other.GetComponent<DoorAnimator>();
-		if(door == null)
-			return;
-		door.PlayAnim();
-		door.twin.PlayAnim();
+        gameObject.SetActive(false);
+
+        Debug.Log(other.gameObject.name);
+        Debug.Log(other.isTrigger);
+        Debug.Log(other.enabled);
+
+        DoorAnimator door = other.GetComponent<DoorAnimator>();
+		if(door == null) return;
+		door.ToggleDoor();
+		door.twin.ToggleDoor();
 	}
 }

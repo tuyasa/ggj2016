@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fa3c43d76775c4acbb3c383da1331247
-timeCreated: 1454194419
+timeCreated: 1454211538
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -95434,18 +95434,18 @@ TextureImporter:
     - name: UnderGround
       rect:
         serializedVersion: 2
-        x: 640
+        x: 641
         y: 0
-        width: 512
+        width: 511
         height: 511
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -256, y: 255.5}
-        - {x: -256, y: -255.5}
-        - {x: 256, y: -255.5}
-        - {x: 256, y: 255.5}
+      - - {x: -255.5, y: 255.5}
+        - {x: -255.5, y: -255.5}
+        - {x: 255.5, y: -255.5}
+        - {x: 255.5, y: 255.5}
     - name: Lamp
       rect:
         serializedVersion: 2
