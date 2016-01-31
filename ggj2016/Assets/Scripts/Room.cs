@@ -7,9 +7,33 @@ public class Room : MonoBehaviour
 {
 
 	public string roomName;
-	public bool completed = false;
+	bool _completed;
+
+	public bool completed {
+		get{ return _completed; } 
+		set {
+			_completed = value;
+			if (value) {
+				switch (roomName) {
+				case "placard":
+					Manager.Instance.LoadScene (3);
+					break;
+				case "chambre":
+					Manager.Instance.LoadScene (5);
+					break;
+				case "livingRoom":
+					Manager.Instance.LoadScene (4);
+					break;
+				default:
+					break;
+				}
+			}
+		}
+	}
+
 	public Bounds _bounds;
-	public List<Item> itemsInRoom = new List<Item>();
+	public List<Item> itemsInRoom = new List<Item> ();
+
 	Bounds bounds {
 		get {
 			if (_bounds.extents == Vector3.zero)
@@ -43,7 +67,7 @@ public class Room : MonoBehaviour
 	void Start ()
 	{
 		foreach (var item in GetComponentsInChildren<Item>()) {
-			itemsInRoom.Add(item);
+			itemsInRoom.Add (item);
 		}
 	}
 

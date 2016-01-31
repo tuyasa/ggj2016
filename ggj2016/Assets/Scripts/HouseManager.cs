@@ -76,7 +76,14 @@ public class HouseManager : MonoBehaviour
 
 		return null;
 	}
-
+	public bool IsOver()
+	{
+		foreach (var item in rooms) {
+			if(!item.completed)
+				return false;
+		}
+		return  true;
+	}
 	public static void DropItem (Item currentItem, Vector3 atPosition)
 	{
 		bool success = true;
@@ -101,5 +108,12 @@ public class HouseManager : MonoBehaviour
 		currentItem.transform.parent = null;
 		currentItem.transform.position = atPosition;
 //		currentItem.originalLocalScale = new Vector3(1,1,1);
+	}
+	void Update()
+	{
+		if(IsOver())
+		{
+			Manager.Instance.LoadBossScene(3);
+		}
 	}
 }

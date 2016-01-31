@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour {
-
+	
     public UnityEngine.EventSystems.EventSystem eventSystem;
 
     public CanvasRenderer pause;
@@ -15,6 +15,10 @@ public class Manager : MonoBehaviour {
     public CanvasRenderer UIBG;
 
     public MeshRenderer blackRenderer;
+    public static  Manager Instance;
+
+    public int reload;
+    public int reloadMaxTime =15;
 
     enum State
     {
@@ -26,9 +30,12 @@ public class Manager : MonoBehaviour {
     }
 
     State gameState = State.NotStarted;
-
+    public void Awake(){
+    	Instance =this;
+    }
     public IEnumerator Start()
     {
+    	
         DontDestroyOnLoad(this.gameObject); //I want to keep the UI during the whole game
 
         //AppearSequence
@@ -176,5 +183,12 @@ public class Manager : MonoBehaviour {
         }
         blackRenderer.material.SetFloat("_Visibility",0);
     }
-
+    public void LoadScene(int num)
+    {
+    	SceneManager.LoadScene(num);
+    }
+    public void LoadBossScene(int num)
+    {	
+    	SceneManager.LoadScene(num,LoadSceneMode.Additive);
+    }
 }
