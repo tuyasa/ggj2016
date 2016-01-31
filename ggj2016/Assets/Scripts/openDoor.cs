@@ -13,8 +13,7 @@ public class openDoor : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
-        
+	void OnTriggerEnter2D(Collider2D other) {
 
 //        Debug.Log(other.gameObject.name);
 //        Debug.Log(other.isTrigger);

@@ -12,7 +12,7 @@ public class PickUpManager : MonoBehaviour {
 	public float maxDistanceToPickUp = 1f;
 	// Use this for initialization
 	void Start () {
-		
+        pickUpItems = HouseManager.GetItems();
 	}
 	
 	// Update is called once per frame
@@ -48,14 +48,11 @@ public class PickUpManager : MonoBehaviour {
 	{
 		Transform newParent = FindRoom();
 		Debug.Log(newParent);
+       	        HouseManager.DropItem(currentItem);
 		if(newParent != null)
 			currentItem.transform.SetParent(newParent);
 		currentItem = null;
-
-		// Find place where he stands
-
-
-
+	
 	}
 
 }
