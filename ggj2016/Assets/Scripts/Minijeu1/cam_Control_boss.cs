@@ -24,7 +24,7 @@ public class cam_Control_boss : MonoBehaviour {
 			}
 		}
 		else {
-			transform.position = new Vector3 (target.position.x+15, 55, 0) + -15 * Vector3.forward;// + Vector3.up*5;
+			transform.position = new Vector3 (target.position.x+16, 55, 0) + -15 * Vector3.forward;// + Vector3.up*5;
 		}
 		}
 }
